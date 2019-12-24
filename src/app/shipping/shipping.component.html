@@ -1,4 +1,4 @@
-<h3>Shipping prices</h3>
+<h3 *ngIf="(shippingCosts | async)?.length>0">Shipping prices</h3>
 
 <div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
   <span>{{ shipping.type }}</span>
